@@ -178,8 +178,8 @@ set(CURL_LIBS "")
 
 if(ENABLE_ARES)
   set(USE_ARES 1)
-  find_package(CARES REQUIRED)
-  list(APPEND CURL_LIBS ${CARES_LIBRARY})
+  # find_package(CARES REQUIRED)
+  list(APPEND CURL_LIBS ${CARES_BINARY_DIR}/lib64)
 endif()
 
 include(CurlSymbolHiding)

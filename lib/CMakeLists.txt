@@ -44,7 +44,9 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR}/..)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 if(USE_ARES)
-  include_directories(${CARES_INCLUDE_DIR})
+  # include_directories(${CARES_INCLUDE_DIR})
+  include_directories(${CARES_SOURCE_DIR}/include)
+  include_directories(${CARES_BINARY_DIR})
 endif()
 
 add_library(
